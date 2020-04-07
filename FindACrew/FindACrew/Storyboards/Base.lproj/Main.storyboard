@@ -24,6 +24,10 @@
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                     <textInputTraits key="textInputTraits"/>
                                 </searchBar>
+                                <activityIndicatorView key="tableFooterView" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" id="EBh-Vw-O9R">
+                                    <rect key="frame" x="0.0" y="815" width="414" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                </activityIndicatorView>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PersonTableViewCell" id="Iea-HL-bVV" customClass="PersonTableViewCell" customModule="FindACrew" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="84" width="414" height="100"/>
@@ -70,6 +74,9 @@
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="WnF-tv-gXL"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -77,6 +84,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Find a Crew" id="yJg-xq-qmA"/>
                     <connections>
+                        <outlet property="activityIndicator" destination="EBh-Vw-O9R" id="xID-G9-tYa"/>
                         <outlet property="searchBar" destination="ayd-nc-Gq3" id="381-gL-82E"/>
                         <outlet property="tableView" destination="OWf-MJ-cIJ" id="fZY-6f-dBT"/>
                     </connections>

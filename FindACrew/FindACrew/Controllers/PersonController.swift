@@ -9,7 +9,6 @@
 import Foundation
 
 final class PersonController {
-    
     enum HTTPMethod: String {
         case get = "GET"
         case put = "PUT"
@@ -18,11 +17,9 @@ final class PersonController {
     }
     
     var people = [Person]()
-    
     private let baseURL = URL(string: "https://swapi.co")!
     private lazy var peopleURL = URL(string: "/api/people", relativeTo: baseURL)!
     private var task: URLSessionTask?
-    
     
     func searchForPeopleWith(searchTerm: String, completion: @escaping () -> Void) {
         task?.cancel()

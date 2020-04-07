@@ -11,7 +11,7 @@ import UIKit
 class PersonSearchViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
-    
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
   
     private let personController = PersonController()
@@ -26,6 +26,8 @@ class PersonSearchViewController: UIViewController {
     }
     
     private func searchWith(searchTerm: String) {
+        activityIndicator.startAnimating()
+        
         personController.searchForPeopleWith(searchTerm: searchTerm) {
             DispatchQueue.main.async {
                 self.update()
@@ -55,6 +57,7 @@ extension PersonSearchViewController {
         snapshot.appendSections([.main])
         snapshot.appendItems(personController.people)
         dataSource.apply(snapshot, animatingDifferences: true)
+        activityIndicator.stopAnimating()
     }
 }
 
@@ -75,5 +78,15 @@ extension PersonSearchViewController: UISearchBarDelegate {
         }
         
         searchWith(searchTerm: searchText)
+    }
+}
+
+
+extension PersonSearchViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        searchBar.resignFirstResponder()
+        let person = personController.people[indexPath.row]
+        dump(person)
     }
 }
