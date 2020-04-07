@@ -63,6 +63,11 @@
                                                 <constraint firstItem="q8q-Af-iKk" firstAttribute="top" secondItem="4PW-8G-AUN" secondAttribute="top" id="rPt-Mx-JFt"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="birthYearLabel" destination="yms-nx-5ac" id="WWG-Zu-pNk"/>
+                                            <outlet property="genderLabel" destination="PkT-aM-KVO" id="lYQ-f1-U86"/>
+                                            <outlet property="nameLabel" destination="fIM-kd-3aO" id="osZ-ev-t0h"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -71,6 +76,10 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Find a Crew" id="yJg-xq-qmA"/>
+                    <connections>
+                        <outlet property="searchBar" destination="ayd-nc-Gq3" id="381-gL-82E"/>
+                        <outlet property="tableView" destination="OWf-MJ-cIJ" id="fZY-6f-dBT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

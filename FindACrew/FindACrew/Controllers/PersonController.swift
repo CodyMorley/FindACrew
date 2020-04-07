@@ -19,7 +19,7 @@ final class PersonController {
     
     var people = [Person]()
     
-    private let baseURL = URL(string: "https://swapi.com")!
+    private let baseURL = URL(string: "https://swapi.co")!
     private lazy var peopleURL = URL(string: "/api/people", relativeTo: baseURL)!
     private var task: URLSessionTask?
     

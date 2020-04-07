@@ -2,7 +2,7 @@
 //  PersonTableViewCell.swift
 //  FindACrew
 //
-//  Created by Bling Morley on 4/6/20.
+//  Created by Cody Morley on 4/6/20.
 //  Copyright © 2020 Cody Morley. All rights reserved.
 //
 
@@ -10,15 +10,25 @@ import UIKit
 
 class PersonTableViewCell: UITableViewCell {
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    static let identifier: String = String(describing: PersonTableViewCell.self)
+    
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var genderLabel: UILabel!
+    @IBOutlet weak var birthYearLabel: UILabel!
+    
+    var person: Person? {
+        didSet {
+            updateViews()
+        }
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    
+    
+    private func updateViews() {
+        guard let person = person else { return }
+        nameLabel.text = person.name
+        genderLabel.text = "Gender: \(person.gender)"
+        birthYearLabel.text = "Birth Year: \(person.birthYear)"
     }
-
+    
+ 
 }
