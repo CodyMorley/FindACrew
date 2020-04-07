@@ -15,6 +15,7 @@
 		5EEC5757243B9122005B644B /* PersonSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EEC5756243B9122005B644B /* PersonSearchViewController.swift */; };
 		5EEC5759243B913B005B644B /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EEC5758243B913B005B644B /* Person.swift */; };
 		5EEC575C243B92B6005B644B /* PersonController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EEC575B243B92B6005B644B /* PersonController.swift */; };
+		5EEC575E243BDAAC005B644B /* PersonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EEC575D243BDAAC005B644B /* PersonTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		5EEC5756243B9122005B644B /* PersonSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonSearchViewController.swift; sourceTree = "<group>"; };
 		5EEC5758243B913B005B644B /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		5EEC575B243B92B6005B644B /* PersonController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonController.swift; sourceTree = "<group>"; };
+		5EEC575D243BDAAC005B644B /* PersonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 		5EEC5753243B8FE3005B644B /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				5EEC575D243BDAAC005B644B /* PersonTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -200,6 +203,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5EEC575E243BDAAC005B644B /* PersonTableViewCell.swift in Sources */,
 				5EEC5757243B9122005B644B /* PersonSearchViewController.swift in Sources */,
 				5EEC573D243B8F07005B644B /* AppDelegate.swift in Sources */,
 				5EEC5759243B913B005B644B /* Person.swift in Sources */,
